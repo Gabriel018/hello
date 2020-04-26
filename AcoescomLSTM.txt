@@ -96,7 +96,7 @@ x_test.append(test_Data[i-60:i, 0])
   prediction = model.predict(x_test)
   predictions = scaler.inverse_transform(predictions)
 
-# Pegando o RMSE (root neab squared error)
+# Pegando o RMSE (root neab squared error). O RMSD de um estimador em relação a um parâmetro estimado é definido como a raiz quadrada do erro quadrático médio.
 rmse = np.sqrt( np.mean( prediction - y_test )**2 )
 rmse
 
@@ -143,7 +143,7 @@ rmse
   print(pred_price)
   
   # Pegando o quote
-  apple_quote = web.DataReader('AAPL',data_source='yahoo', start='2019-12-18', end='2019-12-18')
+  apple_quote2 = web.DataReader('AAPL',data_source='yahoo', start='2019-12-18', end='2019-12-18')
   print(apple_quote2['Close'])
   
   
